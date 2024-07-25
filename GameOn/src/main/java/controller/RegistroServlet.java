@@ -37,7 +37,6 @@ public class RegistroServlet extends HttpServlet{
         boolean registroExitoso = usuarioDAO.insertarUsuario(usuario);
         
         if (registroExitoso) {
-            usuarioDAO.insertarUsuario(usuario);
             response.sendRedirect("pages/registro.html?exito=true");
         } else {
             response.sendRedirect("pages/registro.html?error=true");
